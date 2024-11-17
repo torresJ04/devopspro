@@ -67,3 +67,34 @@
 `git bisect start` -> Start a bisect session.  
 `git bisect bad` -> Mark the current commit as bad.  
 `git bisect good <commit>` -> Mark a commit as good.
+
+---
+### Commits Management
+`git commit -m "message"` -> Create a new commit with a message.  
+`git commit --amend` -> Amend the previous commit.  
+`git reset <commit>` -> Reset the current branch to a specific commit.  
+`git revert <commit>` -> Create a new commit that reverts the changes made by a specific commit.  
+`git cherry-pick <commit>` -> Apply the changes introduced by a specific commit.  
+`git log` -> Show the commit history.  
+`git show <commit>` -> Show changes in a specific commit.  
+`git diff <commit>` -> Show changes between the working directory and a specific commit.  
+`git blame <file>` -> Show who changed each line of a file.  
+`git reflog` -> Show a log of all references, including commits that were amended or reset.  
+`git bisect start` -> Start a binary search to find the commit that introduced a bug.  
+`git bisect bad` -> Mark the current commit as bad during a bisect session.  
+`git bisect good <commit>` -> Mark a commit as good during a bisect session.
+
+---
+### Commits Management with Options
+`git commit -m "message"` -> Create a new commit with a message.  
+`git commit --amend` -> Amend the previous commit.  
+`git log -p` -> Show the commit history with patch differences.  
+`git diff -u` -> Show changes between commits, commit and working tree, etc., with unified diff format.  
+`git status -s` -> Show the working tree status in short format.  
+`git reset -q` -> Quietly reset the current branch to a specific commit.  
+`git revert -n` -> Do not commit the changes automatically after reverting a specific commit.  
+`git cherry-pick -x` -> Append information about the cherry-picked commit to the commit message.  
+`git show -s` -> Show the commit message only, without the diff.
+
+### Common `-a` Option
+`git commit -a` -> Commit all changed files, skipping the staging phase.
